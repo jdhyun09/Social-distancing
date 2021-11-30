@@ -1,15 +1,58 @@
 <!DOCTYPE html>
+<style>
+    body {  background-color: #efefef; 
+            text-align: center; 
+            margin-top: 64px;
+            /* font-family: ; */
+            /* font-weight: ; */
+        }
+    .headings { color: black; }
+    .refer { color: gray; }
+    ul#golist {
+        list-style-type: none;
+        /* letter-spacing: -5px; */
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin: 20px;
+        box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+        opacity: 0.8;
+    }
+</style>
 <html>
 <head>
     <title>사회적 거리두기: 지금 내가 가는 곳은?</title>
 </head>
 <body>
-    <h1>사회적 거리두기: 지금 내가 가는 곳은?</h1>
-    <small>마지막 업데이트: </small>
-    내용
+    <h1 class ="headings">사회적 거리두기:<br> 지금 내가 가는 곳은?</h1>
+    
+    <small class ="refer">마지막 업데이트: </small>
+    <p>검색창</p>
+    <ul id="golist">
+        <li>
+            <a href="">
+                <img src="images/init.PNG" style ="width: 200px;"/>
+                
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="images/init.PNG" style ="width: 200px;"/>
+                
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="images/init.PNG" style ="width: 200px;"/>
+                
+            </a>
+        </li>
+    </ul>
     
     <last>
-        <a href ="">질병청 보도자료</a>
+        <a href ="http://ncov.mohw.go.kr/tcmBoardView.do?brdId=&brdGubun=&dataGubun=&ncvContSeq=368300&contSeq=368300&board_id=140&gubun=BDJ" target="_blank">
+            거리두기 단계 상세정보</a>
     </last>
 </body>
 </html>
