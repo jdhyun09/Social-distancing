@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<script>
+    function info_show(){
+        document.getElementById("informationSpace").style.display = "block";
+    }
+    function info_hide(){
+        document.getElementById("informationSpace").style.display = "none";
+    }
+</script>
 <style>
     body {  background-color: #efefef; 
             text-align: center; 
@@ -8,6 +16,20 @@
         }
     .headings { color: black; }
     .refer { color: gray; }
+
+#informationSpace {
+    display: none;
+    position:absolute;
+    width:600px;
+    height:800px;
+    z-index:2;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 0.5em;
+    top: 50%; /*중앙으로 배열*/
+    left: 50%; /*중앙으로 배열*/
+    transform: translate(-50%, -50%); /*중앙으로 배열*/
+}
     ul#golist {
         list-style-type: none;
         /* letter-spacing: -5px; */
@@ -36,28 +58,24 @@
     <small class ="refer">마지막 업데이트: </small>
     <p>검색창</p>
     <ul id="golist">
+        <!-- 순서 없는 리스트 -->
         <li>
-            <a href="">
-                <img src="images/init.PNG" style ="width: 200px;"/>
-                
-            </a>
+                <img src="images/init.PNG" style ="width: 200px;" onclick="info_show()"/>
         </li>
         <li>
-            <a href="">
-                <img src="images/init.PNG" style ="width: 200px;"/>
-                
-            </a>
+            <img src="images/init.PNG" style ="width: 200px;" onclick="info_show()"/>
         </li>
         <li>
-            <a href="">
-                <img src="images/init.PNG" style ="width: 200px;"/>
-                
-            </a>
+            <img src="images/init.PNG" style ="width: 200px;" onclick="info_show()"/>
         </li>
     </ul>
-    
+    <div id="informationSpace">
+        <strong>다중이용시설 이름</strong>
+        <button onclick="info_hide()">나가기</button>
+    </div>
     <footer class="footer">
         <a href ="http://ncov.mohw.go.kr/tcmBoardView.do?brdId=&brdGubun=&dataGubun=&ncvContSeq=368300&contSeq=368300&board_id=140&gubun=BDJ" target="_blank">
+            <!-- 정부의 거리두기 보도자료 링크 새로운 창으로 열기 -->
             거리두기 단계 상세정보</a>
         </footer>
 </body>

@@ -1,9 +1,21 @@
 <!DOCTYPE html>
+<script>
+        function setHomeValue(index) {
+            location.href = "home.html?value=" + value;
+        }
+</script>
+
 <html>
+    <script>
+        function setHomeValue(index) {
+            var loc = document.getElementById("location");//document로 select 가져오기
+            location.href = "home.html?value=" + loc.options[loc.selectedIndex].value;//select에서 선택 값 home.html로 넘겨주기
+        }
+</script>
 <body>
 <div style="position: absolute; left: 50%; top: 50%;transform: translate(-50%,-50%); text-align: center;">
 <h1>지역을 선택하세요.</h1>
-<select id= "city">
+<select id= "location">
     <option value="1">서울</option>
     <option value="2">경기</option>
     <option value="3">인천</option>
@@ -21,7 +33,10 @@
     <option value="15">광주</option>
     <option value="16">부산</option>
     <option value="17">제주</option>
-</select>
+</select><br>
+<button type="button" onclick="setHomeValue(value)">
+    넘어가기
+</button>
 </div>
 </body>
 </html>
