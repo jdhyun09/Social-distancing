@@ -21,7 +21,7 @@
     display: none;
     position:absolute;
     width:600px;
-    height:800px;
+    height:400px;
     z-index:2;
     background-color: white;
     border: 1px black solid;
@@ -69,19 +69,30 @@
             <img src="images/init.PNG" style ="width: 200px;" onclick="info_show()"/>
         </li>
     </ul>
-    <div id="informationSpace">
-        <strong>다중이용시설 이름</strong>
-        <button onclick="info_hide()">나가기</button>
+    <article id="informationSpace">
+        <!-- 가독성을 위해 시맨틱 태그 사용 -->
+        <header>
+            <h1>다중이용시설 이름</h1>
+            <button onclick="info_hide()" style="position: absolute; top: 10px; right: 10px;">나가기</button>
+        </header>
         <br>
-        <span>운영시간</span>
-        <span id="time">내용</span>
-        <br>
-        <span>방역수칙</span>
-        <span id="initname">내용</span>
-        <br>
-        <span>이용내용</span>
-        <span id="initname2">내용</span>
-    </div>
+        <section style="position: absolute; text-align: left; left: 30px">
+            <span>현재 사회적 거리두기 단계:  </span>
+            <span id="currentSD">내용</span>
+            <br><br>
+            <span>운영시간:  </span>
+            <span id="time">내용</span>
+            <br><br>
+            <span>인원제한:  </span>
+            <span id="initname">내용</span>
+            <br><br>
+            <span>이용대상:  </span>
+            <span id="initname2">내용</span>
+            <br><br>
+            <span>접종증명, 음성확인제:  </span>
+            <span id="certification">내용</span>
+        </section>
+    </article>
     <footer class="footer">
         <a href ="http://ncov.mohw.go.kr/tcmBoardView.do?brdId=&brdGubun=&dataGubun=&ncvContSeq=368300&contSeq=368300&board_id=140&gubun=BDJ" target="_blank">
             <!-- 정부의 거리두기 보도자료 링크 새로운 창으로 열기 -->
