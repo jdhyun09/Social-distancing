@@ -37,13 +37,14 @@ img {
 }
 
 ul#golist {
-  list-style-type: none;
+  /* list-style-type: none; */
   /* letter-spacing: -5px; */
   padding: 0;
+  margin-top: 50px;
 }
 li {
   display: inline-block;
-  margin: 20px;
+  margin: 25px;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -52,4 +53,44 @@ footer {
   /* position: absolute; */
   bottom: 0px;
   left: 0;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  /* color: ; */
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap {
+  position: absolute;
+  left: 50%;
+  margin-left: -175px;
+  margin-top: 15px;
 }
