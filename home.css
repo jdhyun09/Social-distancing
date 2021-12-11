@@ -1,0 +1,55 @@
+body {
+  background-color: #efefef;
+  text-align: center;
+  margin-top: 64px;
+  /* font-family: ; */
+  /* font-weight: ; */
+}
+.headings {
+  color: black;
+}
+.refer {
+  color: gray;
+}
+.facility {
+  position: absolute;
+  font-size: 19px;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+img {
+  filter: brightness(45%);
+}
+#informationSpace {
+  display: none;
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  z-index: 2;
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 0.5em;
+  top: 50%; /*중앙으로 배열*/
+  left: 50%; /*중앙으로 배열*/
+  transform: translate(-50%, -50%); /*중앙으로 배열*/
+}
+
+ul#golist {
+  list-style-type: none;
+  /* letter-spacing: -5px; */
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  width: 100%;
+  /* position: absolute; */
+  bottom: 0px;
+  left: 0;
+}

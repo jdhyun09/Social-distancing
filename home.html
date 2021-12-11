@@ -1,57 +1,12 @@
 <!DOCTYPE html>
-<script>
-    function info_show(){
-        document.getElementById("informationSpace").style.display = "block";
-    }
-    function info_hide(){
-        document.getElementById("informationSpace").style.display = "none";
-    }
-</script>
-<style>
-    body {  background-color: #efefef; 
-            text-align: center; 
-            margin-top: 64px;
-            /* font-family: ; */
-            /* font-weight: ; */
-        }
-    .headings { color: black; }
-    .refer { color: gray; }
-
-#informationSpace {
-    display: none;
-    position:absolute;
-    width:600px; 
-    height:400px;
-    z-index:2;
-    background-color: white;
-    border: 1px black solid;
-    border-radius: 0.5em;
-    top: 50%; /*중앙으로 배열*/
-    left: 50%; /*중앙으로 배열*/
-    transform: translate(-50%, -50%); /*중앙으로 배열*/
-}
-    ul#golist {
-        list-style-type: none;
-        /* letter-spacing: -5px; */
-        padding: 0;
-    }
-    li {
-        display: inline-block;
-        margin: 20px;
-        box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-        opacity: 0.8;
-    }
-    footer {
-        width: 100%;
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-    }
-</style>
 <html>
+
 <head>
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <script src="home.js"></script>
     <title>사회적 거리두기: 지금 내가 가는 곳은?</title>
 </head>
+
 <body>
     <h1 class ="headings">사회적 거리두기:<br> 지금 내가 가는 곳은?</h1>
     
@@ -59,16 +14,66 @@
     <p>검색창</p>
     <ul id="golist">
         <!-- 순서 없는 리스트 -->
-        <li>
-                <img src="images/init.PNG" style ="width: 200px;" onclick="info_show()"/>
+        <li>    
+                <div style="position: relative;" onclick="info_show()">
+                    <img src="images/restaurant.jpg" style ="width: 200px;"/>
+                    <span class = "facility">식당</span>
+                </div>
         </li>
         <li>
-            <img src="images/init.PNG" style ="width: 200px;" onclick="info_show()"/>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/cafe.jpg" style ="width: 200px;"/>
+                <span class = "facility">카페</span>
+            </div>
         </li>
         <li>
-            <img src="images/init.PNG" style ="width: 200px;" onclick="info_show()"/>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/gym.jpg" style ="width: 200px;"/>
+                <span class = "facility">헬스장</span>
+            </div>
+        </li>
+        <br>
+
+        <li>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/bar.jpg" style ="width: 200px;"/>
+                <span class = "facility">유흥시설</span>
+            </div>
+        </li>
+        <li>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/pc-room.jpeg" style ="width: 200px;"/>
+                <span class = "facility">PC방</span>
+            </div>
+        </li>
+        <li>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/cinema.jpg" style ="width: 200px;"/>
+                <span class = "facility">영화관</span>
+            </div>
+        </li>
+        <br>
+
+        <li>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/karaoke.jpg" style ="width: 200px;"/>
+                <span class = "facility">노래연습장</span>
+            </div>
+        </li>
+        <li>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/stadium.jpg" style ="width: 200px;"/>
+                <span class = "facility">스포츠관람장</span>
+            </div>
+        </li>
+        <li>
+            <div style="position: relative;" onclick="info_show()">
+                <img src="images/concert.jpeg" style ="width: 200px;"/>
+                <span class = "facility">공연장</span>
+            </div>
         </li>
     </ul>
+
     <article id="informationSpace">
         <!-- 가독성을 위해 시맨틱 태그 사용 -->
         <header>
@@ -81,7 +86,7 @@
             <span id="currentSD">내용</span>
             <br><br>
             <span>운영시간:  </span>
-            <span id="time">내용</span>
+            <span id="time">테스트</span>
             <br><br>
             <span>인원제한:  </span>
             <span id="initname">내용</span>
@@ -93,6 +98,7 @@
             <span id="certification">내용</span>
         </section>
     </article>
+
     <footer class="footer">
         <a href ="http://ncov.mohw.go.kr/tcmBoardView.do?brdId=&brdGubun=&dataGubun=&ncvContSeq=368300&contSeq=368300&board_id=140&gubun=BDJ" target="_blank">
             <!-- 정부의 거리두기 보도자료 링크 새로운 창으로 열기 -->
