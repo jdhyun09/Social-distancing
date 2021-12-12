@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<script>
-        function setHomeValue(index) {
-            location.href = "home.html?value=" + value;
-        }
-</script>
 <style>
 body{
     background-color: #efefef;
@@ -16,6 +11,11 @@ body{
     text-align: center;
 }
 
+#location{
+    width: 150px;
+    height: 30px;
+}
+
 #nextbtn{
     margin-top: 20px;
     position: relative;
@@ -24,11 +24,11 @@ body{
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     font-weight: 500;
-    transition: 0.25s;
+    transition: 0.25s;/*전환시간*/
     background-color: #00b4cc;
     color: black;
 }
-#nextbtn:hover {
+#nextbtn:hover {/*커서를 올렸을때*/
     letter-spacing: 2px;
     transform: scale(1.2);
     cursor: pointer;
@@ -42,30 +42,29 @@ body{
         }
 </script>
 <body>
-<div class="mydiv">
-<h1>지역을 선택하세요.</h1>
-<select id= "location" style="width: 150px; height: 30px;">
-    <option value="00">서울</option>
-    <option value="01">경기</option>
-    <option value="02">인천</option>
-    <option value="03">강원</option>
-    <option value="04">충북</option>
-    <option value="05">세종</option>
-    <option value="06">충남</option>
-    <option value="07">경북</option>
-    <option value="08">대전</option>
-    <option value="09">대구</option>
-    <option value="10">전북</option>
-    <option value="11">울산</option>
-    <option value="12">경남</option>
-    <option value="13">전남</option>
-    <option value="14">광주</option>
-    <option value="15">부산</option>
-    <option value="16">제주</option>
-</select><br>
-<button id="nextbtn" type="button" onclick="setHomeValue(value)">
-    넘어가기
-</button>
-</div>
+    <div class="mydiv">
+        <h1>지역을 선택하세요.</h1>
+        <select id= "location">
+            <option value="00">서울</option>
+            <option value="01">경기</option>
+            <option value="02">인천</option>
+            <option value="03">강원</option>
+            <option value="04">충북</option>
+            <option value="05">세종</option>
+            <option value="06">충남</option>
+            <option value="07">경북</option>
+            <option value="08">대전</option>
+            <option value="09">대구</option>
+            <option value="10">전북</option>
+            <option value="11">울산</option>
+            <option value="12">경남</option>
+            <option value="13">전남</option>
+            <option value="14">광주</option>
+            <option value="15">부산</option>
+            <option value="16">제주</option>
+        </select>
+        <br>
+        <button id="nextbtn" type="button" onclick="setHomeValue(value)">넘어가기</button>
+    </div>
 </body>
 </html>

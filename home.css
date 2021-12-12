@@ -2,8 +2,6 @@ body {
   background-color: #efefef;
   text-align: center;
   margin-top: 64px;
-  /* font-family: ; */
-  /* font-weight: ; */
 }
 .headings {
   color: black;
@@ -15,19 +13,19 @@ body {
   position: absolute;
   font-size: 19px;
   color: white;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%; /*중앙으로 배열*/
+  top: 50%; /*중앙으로 배열*/
+  transform: translate(-50%, -50%); /*중앙으로 배열*/
 }
 img {
-  filter: brightness(45%);
+  filter: brightness(45%); /*이미지 살짝 어둡게*/
 }
 #informationSpace {
   display: none;
   position: absolute;
   width: 600px;
   height: 400px;
-  z-index: 2;
+  z-index: 2; /*맨 앞에 출력*/
   background-color: white;
   border: 3px black solid;
   border-radius: 0.5em;
@@ -47,13 +45,11 @@ img {
 }
 
 ul#golist {
-  /* list-style-type: none; */
-  /* letter-spacing: -5px; */
   padding: 0;
   margin-top: 50px;
 }
 li {
-  display: inline-block;
+  display: inline-block; /*여러개를 한줄에 배치할 수 있게*/
   margin: 25px;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
 }
