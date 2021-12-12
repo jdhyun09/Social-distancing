@@ -10,11 +10,11 @@
 <body>
     <h1 class ="headings">사회적 거리두기:<br> 지금 내가 가는 곳은?</h1>
     
-    <small class ="refer">마지막 업데이트: </small>
+    <small class ="refer">마지막 업데이트: 2021.12.12. 오후 6:30</small>
     <div class="wrap" style="width: 350px;">
         <div class="search">
-            <input type="text" class="searchTerm" placeholder="방문할 장소를 입력하세요.">
-            <button type="submit" class="searchButton">
+            <input id="search_text" type="text" class="searchTerm" placeholder="방문할 장소를 입력하세요.">
+            <button type="submit" class="searchButton" onclick="searchWhere();">
             <img src="images/search.svg" style="width: 15px;"/>
             </button>
         </div>
@@ -22,19 +22,19 @@
     <ul id="golist">
         <!-- 순서 없는 리스트 -->
         <li>    
-                <div style="position: relative;" onclick="info_show(); load_info(1);">
+                <div style="position: relative;" onclick="load_info(0); info_show();">
                     <img src="images/restaurant.jpg" style ="width: 200px;"/>
                     <span class = "facility">식당</span>
                 </div>
         </li>
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(2);">
+            <div style="position: relative;" onclick="load_info(1); info_show();">
                 <img src="images/cafe.jpg" style ="width: 200px;"/>
                 <span class = "facility">카페</span>
             </div>
         </li>
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(3);">
+            <div style="position: relative;" onclick="load_info(2); info_show();">
                 <img src="images/gym.jpg" style ="width: 200px;"/>
                 <span class = "facility">헬스장</span>
             </div>
@@ -42,19 +42,19 @@
         <br>
 
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(4);">
+            <div style="position: relative;" onclick="load_info(3); info_show();">
                 <img src="images/bar.jpg" style ="width: 200px;"/>
                 <span class = "facility">유흥시설</span>
             </div>
         </li>
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(5);">
+            <div style="position: relative;" onclick="load_info(4); info_show();">
                 <img src="images/pc-room.jpeg" style ="width: 200px;"/>
                 <span class = "facility">PC방</span>
             </div>
         </li>
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(6);">
+            <div style="position: relative;" onclick="load_info(5); info_show();">
                 <img src="images/cinema.jpg" style ="width: 200px;"/>
                 <span class = "facility">영화관</span>
             </div>
@@ -62,19 +62,19 @@
         <br>
 
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(7);">
+            <div style="position: relative;" onclick="load_info(6); info_show();">
                 <img src="images/karaoke.jpg" style ="width: 200px;"/>
                 <span class = "facility">노래연습장</span>
             </div>
         </li>
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(8);">
+            <div style="position: relative;" onclick="load_info(7); info_show();">
                 <img src="images/stadium.jpg" style ="width: 200px;"/>
                 <span class = "facility">스포츠관람장</span>
             </div>
         </li>
         <li>
-            <div style="position: relative;" onclick="info_show(); load_info(9);">
+            <div style="position: relative;" onclick="load_info(8); info_show();">
                 <img src="images/concert.jpeg" style ="width: 200px;"/>
                 <span class = "facility">공연장</span>
             </div>
@@ -85,7 +85,7 @@
         <!-- 가독성을 위해 시맨틱 태그 사용 -->
         <header>
             <h1 id ="title">다중이용시설 이름</h1>
-            <button onclick="info_hide()" style="position: absolute; top: 10px; right: 10px;">나가기</button>
+            <button id="quitbtn" onclick="info_hide()">나가기</button>
         </header>
         <br>
         <section style="position: absolute; text-align: left; left: 30px">
@@ -105,7 +105,7 @@
             <br>
             <span id="pass">내용</span>
             <br><br><br>
-            <span id="extra"></span>
+            <span id="extra" style="color:gray;"></span>
         </section>
     </article>
 
